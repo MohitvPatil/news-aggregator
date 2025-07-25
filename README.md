@@ -1,5 +1,5 @@
 # 📰 News Aggregator – Powered by Next.js
-
+aaaa
 A dynamic, real-time news aggregator that allows users to:
 
 - Select categories (India, World, Movies, Sports, Business, Health, etc.)
