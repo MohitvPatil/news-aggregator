@@ -96,7 +96,7 @@ export default function Home() {
           background: #002a4e;
           color: white;
           padding: 12px 20px;
-          border-bottom: 3px solid #ffe033;
+          border-bottom: 3px solid rgba(119, 109, 51, 1);
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -117,7 +117,7 @@ export default function Home() {
         }
         .auth-button {
           padding: 6px 12px;
-          background: #ffe033;
+          background: rgba(119, 109, 51, 1);
           color: #002a4e;
           border: 1px solid #002a4e;
           border-radius: 6px;
@@ -145,7 +145,7 @@ export default function Home() {
         }
         .dark .toggle-slider {
           transform: translateX(24px);
-          background: #ffe033;
+          background: rgba(119, 109, 51, 1);
         }
         .categories {
           display: flex;
@@ -169,10 +169,10 @@ export default function Home() {
         }
         .dark .cat-btn {
           background: #222;
-          color: #ffe033;
+          color: rgba(119, 109, 51, 1);
         }
         .dark .cat-btn.active {
-          background: #ffe033;
+          background: rgba(119, 109, 51, 1);
           color: #002a4e;
         }
         .edit-control {
