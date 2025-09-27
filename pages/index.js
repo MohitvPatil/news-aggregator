@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import backgroundImage from "D:/VScodes/News Aggregator/public/background.webp";
 
 export default function Home() {
+
   const fallbackCategories = [
     "All", "India", "World", "Movies", "Sport", "Data", "Health", "Science", "Business"
   ];
@@ -75,184 +77,17 @@ export default function Home() {
     }
   };
 
-  return (
-    <div className={darkMode ? "dark" : "light"}>
-      <style jsx>{`
-        .light {
-          background-color: #f4f4f4;
-          color: #000;
-        }
-        .dark {
-          background-color: #121212;
-          color: #eee;
-        }
-        .container {
-          max-width: 1200px;
-          margin: auto;
-          padding: 20px;
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .top-bar {
-          background: #002a4e;
-          color: white;
-          padding: 12px 20px;
-          border-bottom: 3px solid rgba(119, 109, 51, 1);
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-        .top-left,
-        .top-center,
-        .top-right {
-          flex: 1;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        .top-left { justify-content: flex-start; }
-        .top-right { justify-content: flex-end; }
-        .title {
-          font-size: 28px;
-          font-weight: 700;
-        }
-        .auth-button {
-          padding: 6px 12px;
-          background: rgba(119, 109, 51, 1);
-          color: #002a4e;
-          border: 1px solid #002a4e;
-          border-radius: 6px;
-        }
-        .toggle-switch {
-          position: relative;
-          width: 50px;
-          height: 26px;
-          background: #eee;
-          border-radius: 50px;
-          cursor: pointer;
-        }
-        .toggle-slider {
-          position: absolute;
-          top: 2px;
-          left: 2px;
-          height: 22px;
-          width: 22px;
-          border-radius: 50%;
-          background: #002a4e;
-          transition: 0.3s;
-        }
-        .dark .toggle-switch {
-          background: #333;
-        }
-        .dark .toggle-slider {
-          transform: translateX(24px);
-          background: rgba(119, 109, 51, 1);
-        }
-        .categories {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          margin: 20px 0;
-          gap: 8px;
-        }
-        .cat-btn {
-          padding: 6px 12px;
-          border: 1px solid #aaa;
-          background: white;
-          border-radius: 6px;
-          font-size: 14px;
-          cursor: pointer;
-          color: #002a4e;
-        }
-        .cat-btn.active {
-          background: #002a4e;
-          color: white;
-        }
-        .dark .cat-btn {
-          background: #222;
-          color: rgba(119, 109, 51, 1);
-        }
-        .dark .cat-btn.active {
-          background: rgba(119, 109, 51, 1);
-          color: #002a4e;
-        }
-        .edit-control {
-          display: flex;
-          justify-content: center;
-          margin-top: 10px;
-          gap: 10px;
-        }
-        .edit-control input {
-          padding: 6px;
-          font-size: 14px;
-        }
-        .edit-control button {
-          padding: 6px 10px;
-          font-size: 14px;
-        }
-        .remove-btn {
-          color: red;
-          background: none;
-          border: none;
-          margin-left: 4px;
-          cursor: pointer;
-        }
-        .card-container {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-          gap: 20px;
-        }
-        .card {
-          background: white;
-          border: 1px solid #ccc;
-          border-radius: 10px;
-          padding: 20px;
-        }
-        .dark .card {
-          background: #1c1c1c;
-          border: 1px solid #444;
-        }
-        .card img {
-          width: 66%;
-          margin: 0 auto 10px;
-          border-radius: 6px;
-          display: block;
-        }
-        .card a {
-          font-size: 18px;
-          font-weight: bold;
-          text-decoration: none;
-          color: #0040cc;
-        }
-        .dark .card a {
-          color: #90caf9;
-        }
-        .description {
-          font-size: 14px;
-          overflow: hidden;
-          display: -webkit-box;
-          -webkit-line-clamp: 8;
-          -webkit-box-orient: vertical;
-        }
-        .expanded {
-          -webkit-line-clamp: unset !important;
-        }
-        .expand-btn {
-          margin-top: 6px;
-          padding: 4px 8px;
-          font-size: 12px;
-          background: #002a4e;
-          color: white;
-          border: none;
-          border-radius: 4px;
-        }
-        .date {
-          font-size: 12px;
-          margin-top: 10px;
-          font-style: italic;
-          opacity: 0.6;
-        }
-      `}</style>
+  const backgroundImageStyle = {
+    backgroundImage: `url(${backgroundImage.src})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundAttachment: "fixed",
+    minHeight: "100vh",            // allows background to cover entire page
+    width: "100%",
+  };
 
+  return (
+    <div style={backgroundImageStyle}>
       <div className="container">
         <div className="top-bar">
           <div className="top-left">
